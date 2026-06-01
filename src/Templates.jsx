@@ -4,7 +4,7 @@ useParams
 }
 from "react-router-dom";
 
-import "./templates.css";
+import "./Templates.css";
 
 
 function Templates(){
