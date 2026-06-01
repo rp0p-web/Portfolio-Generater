@@ -1,0 +1,564 @@
+body{
+
+    margin:0;
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+}
+
+
+
+/* PAGE */
+
+.projects-page{
+
+    min-height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+    135deg,
+    #fdfcff,
+    #f6f9ff,
+    #eef4ff
+    );
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding-bottom:120px;
+}
+
+
+
+/* GLOW */
+
+.projects-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    top:-180px;
+    left:-180px;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(124,58,237,0.15),
+    transparent 70%
+    );
+
+    filter:blur(90px);
+
+    z-index:0;
+}
+
+
+
+.projects-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    bottom:-180px;
+    right:-180px;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(6,182,212,0.14),
+    transparent 70%
+    );
+
+    filter:blur(90px);
+
+    z-index:0;
+}
+
+
+
+/* HEADER */
+
+.projects-header{
+
+    position:relative;
+
+    z-index:2;
+
+    margin-top:80px;
+
+    text-align:center;
+}
+
+
+
+/* BADGE */
+
+.projects-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 24px;
+
+    border-radius:100px;
+
+    background:
+    rgba(255,255,255,0.7);
+
+    border:
+    1px solid rgba(255,255,255,0.8);
+
+    backdrop-filter:blur(20px);
+
+    color:#7c3aed;
+
+    font-weight:600;
+
+    box-shadow:
+    0 10px 35px rgba(124,58,237,0.12);
+}
+
+
+
+/* TITLE */
+
+.projects-header h1{
+
+    font-size:
+    clamp(55px,8vw,100px);
+
+    line-height:1.05;
+
+    margin-top:28px;
+
+    color:#0f172a;
+}
+
+
+
+/* GRADIENT */
+
+.projects-header h1 span{
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #06b6d4
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+
+
+/* SUBTITLE */
+
+.projects-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-top:18px;
+
+    font-size:20px;
+
+    color:#64748b;
+
+    line-height:1.8;
+}
+
+
+
+/* PROGRESS */
+
+.projects-progress-container{
+
+    width:75%;
+
+    max-width:950px;
+
+    margin-top:60px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+
+
+/* LINE */
+
+.projects-progress-line{
+
+    width:100%;
+
+    height:16px;
+
+    border-radius:100px;
+
+    background:
+    rgba(255,255,255,0.7);
+
+    position:relative;
+
+    overflow:visible;
+
+    box-shadow:
+    inset 0 0 12px rgba(0,0,0,0.05);
+}
+
+
+
+/* FILL */
+
+.projects-progress-fill{
+
+    width:88%;
+
+    height:100%;
+
+    border-radius:100px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #06b6d4
+    );
+
+    box-shadow:
+    0 0 25px rgba(124,58,237,0.4);
+}
+
+
+
+/* ORB */
+
+.projects-progress-orb{
+
+    position:absolute;
+
+    left:88%;
+
+    top:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    width:65px;
+    height:65px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    animation:
+    orbFloat 2s ease-in-out infinite;
+}
+
+
+
+/* CORE */
+
+.projects-orb-core{
+
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #7c3aed,
+    #06b6d4
+    );
+
+    box-shadow:
+    0 0 25px rgba(124,58,237,0.8),
+    0 0 50px rgba(6,182,212,0.6);
+}
+
+
+
+/* RING */
+
+.projects-orb-ring{
+
+    position:absolute;
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    border:
+    2px solid rgba(124,58,237,0.25);
+
+    animation:
+    pulseRing 2s linear infinite;
+}
+
+
+
+/* CARD */
+
+.project-card{
+
+    position:relative;
+
+    z-index:2;
+
+    width:90%;
+
+    max-width:900px;
+
+    margin-top:40px;
+
+    padding:45px;
+
+    border-radius:35px;
+
+    background:
+    rgba(255,255,255,0.72);
+
+    border:
+    1px solid rgba(255,255,255,0.8);
+
+    backdrop-filter:blur(24px);
+
+    box-shadow:
+    0 25px 60px rgba(15,23,42,0.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+}
+
+
+
+/* INPUT */
+
+.project-card input,
+.project-card textarea{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:white;
+
+    font-size:16px;
+
+    color:#0f172a;
+
+    box-shadow:
+    inset 0 0 0 1px rgba(148,163,184,0.2);
+
+    transition:0.3s;
+}
+
+
+
+/* TEXTAREA */
+
+.project-card textarea{
+
+    min-height:140px;
+
+    resize:none;
+}
+
+
+
+/* FOCUS */
+
+.project-card input:focus,
+.project-card textarea:focus{
+
+    box-shadow:
+    0 0 0 5px rgba(124,58,237,0.12);
+}
+
+
+
+/* BUTTON GROUP */
+
+.projects-button-group{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:40px;
+}
+
+
+
+/* BUTTON */
+
+.projects-button-group button,
+.remove-btn{
+
+    padding:16px 30px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #06b6d4
+    );
+
+    transition:0.35s ease;
+
+    box-shadow:
+    0 18px 40px rgba(124,58,237,0.25);
+}
+
+
+
+/* HOVER */
+
+.projects-button-group button:hover,
+.remove-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 25px 55px rgba(124,58,237,0.35);
+}
+
+
+
+/* REMOVE */
+
+.remove-btn{
+
+    background:
+    linear-gradient(
+    90deg,
+    #ef4444,
+    #f97316
+    );
+}
+
+
+
+/* FLOAT */
+
+@keyframes orbFloat{
+
+    0%{
+
+        transform:
+        translate(-50%,-50%)
+        translateY(0px);
+    }
+
+    50%{
+
+        transform:
+        translate(-50%,-50%)
+        translateY(-8px);
+    }
+
+    100%{
+
+        transform:
+        translate(-50%,-50%)
+        translateY(0px);
+    }
+}
+
+
+
+/* PULSE */
+
+@keyframes pulseRing{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+    }
+
+    100%{
+
+        transform:scale(1.5);
+
+        opacity:0;
+    }
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .project-card{
+
+        padding:30px;
+    }
+
+    .projects-header h1{
+
+        font-size:55px;
+    }
+
+    .projects-button-group{
+
+        flex-direction:column;
+    }
+}
